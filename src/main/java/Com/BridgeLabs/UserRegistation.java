@@ -1,12 +1,14 @@
 package Com.BridgeLabs;
 
-
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistation {
     public void UserFirstName(String Firstname) {
+        /*
+         * the A-Z lattters 1 or more capital latters  and a|-z more than 2 latters
+         * has to be taken
+         */
 
         Pattern FirstNamepattern = Pattern.compile("^[A-Z]+[a-z]{2,}$");
         Matcher matcher = FirstNamepattern.matcher(Firstname);
@@ -46,7 +48,7 @@ public class UserRegistation {
         }
     }
     public void Password(String Password) {
-        Pattern PasswordMatcher = Pattern.compile("[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*{8,16}$");
+        Pattern PasswordMatcher = Pattern.compile("[a-zA-Z0-9]*[A-Z]+[1-9]+[a-zA-Z0-9]*{8,16}$");
         Matcher matcher = PasswordMatcher.matcher(Password);
         if (matcher.matches()) {
             System.out.println(Password +" -Valid");
@@ -54,5 +56,6 @@ public class UserRegistation {
             System.out.println(Password +" is Invalid");
         }
     }
+
 
 }
