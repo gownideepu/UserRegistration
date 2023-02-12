@@ -32,5 +32,15 @@ public class UserRegistation {
             System.out.println(phonNum +" is Invalid");
         }
     }
+    public void Password(String Password) {
+        Pattern PasswordMatcher = Pattern.compile("^[a-zA-Z0-9]{8,16}$");
+        Matcher matcher = PasswordMatcher.matcher(Password);
+        if (matcher.matches()) {
+            System.out.println(Password +" -Valid");
+        } else {
+            System.out.println(Password +" is Invalid");
+        }
+    }
+
 }
 
