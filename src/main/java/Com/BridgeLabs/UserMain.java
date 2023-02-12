@@ -7,10 +7,11 @@ public class UserMain {
         obj1.UserFirstName("Gowni");
         obj1.UserLastName("Deepu");
 
+
         obj1.UserEmail("abc.xyz@bl.co.in");
 
         obj1.PhoneNumber("+91 9876243210");
-        obj1.Password("l12300L9078l");
+        obj1.Password("l1230*L9078l");
 
     }
 }
