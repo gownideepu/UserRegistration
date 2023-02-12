@@ -9,7 +9,6 @@ public class UserRegistation {
          * the A-Z lattters 1 or more capital latters  and a|-z more than 2 latters
          * has to be taken
          */
-
         Pattern FirstNamepattern = Pattern.compile("^[A-Z]+[a-z]{2,}$");
         Matcher matcher = FirstNamepattern.matcher(Firstname);
         if (matcher.matches()) {
@@ -28,7 +27,7 @@ public class UserRegistation {
         }
     }
     public void UserEmail(String Email) {
-        Pattern EmailPattern = Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
+        Pattern EmailPattern = Pattern.compile("^[a-z]{3}[.]{1}[a-zA-z]{1,}+@+[a-z]{2,}[.]{1}+co+[.]?[a-z]{0,}$");
         Matcher matcher = EmailPattern.matcher(Email);
         if (matcher.matches()) {
             System.out.println(Email +" -Valid");
